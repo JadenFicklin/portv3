@@ -12,10 +12,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: '#0A192F',
+        background: '#0F172A',
         green: '#5EEAD4',
         bubble: '#2DD4BF1a',
-        light: '#FFFFFF99'
+        medium: '#e2e8f0',
+        light: '#94a3b8',
+        lightDarker: '#64748B'
       }
     }
   },
