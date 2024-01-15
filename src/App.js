@@ -1,9 +1,17 @@
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Landing from './pages/Landing';
+import ErrorPage from './pages/ErrorPage';
 
 function App() {
   return (
     <>
-      <div className="w-full min-h-screen bg-background"></div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/*" element={<ErrorPage />} />
+        </Routes>
+      </Router>
     </>
   );
 }
