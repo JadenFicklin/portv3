@@ -27,17 +27,20 @@ function Index() {
   return (
     <>
       <div className="w-full h-screen bg-background">
-        <div className="lg:grid max-w-screen-xl h-screen mx-auto lg:gap-4 lg:grid-cols-2 lg:px-24">
+        <div className="h-screen max-w-screen-xl mx-auto lg:grid lg:gap-4 lg:grid-cols-2 lg:px-24">
           {/* Left section */}
-          <div className="py-24">
-            <Hero />
-            <Nav />
+          <div className="flex flex-col justify-between lg:py-24">
+            <div>
+              <Hero />
+              <Nav />
+            </div>
+
             <Icons />
           </div>
           {/* Right section */}
           <div
             ref={rightSectionRef}
-            className="py-24 h-screen overflow-auto hide-scrollbar">
+            className="h-screen overflow-auto lg:py-24 hide-scrollbar">
             <About />
             {ExperienceArray.map((item) => (
               <div>

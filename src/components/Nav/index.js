@@ -29,7 +29,7 @@ function Index() {
   ];
 
   return (
-    <nav className="mt-10">
+    <nav className="mt-20">
       {navOptions.map((item) => (
         <div className="text-xs">
           <Link
