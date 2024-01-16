@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import HoverImage from '../../../components/customComponents/HoverImage';
 
 import devmountain from './images/devmountain.JPG';
 import devmountainCertificate from './images/devmountainCertificate.JPG';
+import useGetYPosition from '../../../hooks/useGetYPosition';
 
-function index() {
+function Index({ setAboutPosition }) {
+  const aboutRef = useRef(null);
+  useGetYPosition({ set: setAboutPosition, ref: aboutRef });
+
   return (
-    <div className=" lg:mt-0 tracking-[.5px]">
+    <div className=" lg:mt-0 tracking-[.5px]" ref={aboutRef}>
       <h2 className="mb-5 font-semibold text-medium lg:hidden">ABOUT</h2>
       <p className="mb-4">
         Back in 2021, I searched heavily for a career I would feel passionate
@@ -62,4 +66,4 @@ function index() {
   );
 }
 
-export default index;
+export default Index;

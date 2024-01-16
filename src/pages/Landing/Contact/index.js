@@ -1,8 +1,12 @@
 import React, { useRef } from 'react';
 import { cn } from '../../../utils/cn';
 import emailjs from '@emailjs/browser';
+import useGetYPosition from '../../../hooks/useGetYPosition';
 
-function Index() {
+function Index({ setContactPosition }) {
+  const contactRef = useRef(null);
+  useGetYPosition({ set: setContactPosition, ref: contactRef });
+
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -39,7 +43,9 @@ function Index() {
 
   return (
     <>
-      <h2 className="mb-3 font-semibold text-medium mt-28">CONTACT</h2>
+      <h2 className="mb-3 font-semibold text-medium mt-28" ref={contactRef}>
+        CONTACT
+      </h2>
       <form ref={form} onSubmit={sendEmail}>
         <div className="gap-4 text-xs md:grid md:grid-cols-2">
           <div className="group">

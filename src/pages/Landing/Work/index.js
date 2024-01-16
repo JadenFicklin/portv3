@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { WorkArray } from '../../../data/Work';
 import Tags from '../../../components/Tags';
 import { IoMdArrowForward } from 'react-icons/io';
 import { cn } from '../../../utils/cn';
+import useGetYPosition from '../../../hooks/useGetYPosition';
 
-function Index() {
+function Index({ setWorkPosition }) {
   const [hoveredItem, setHoveredItem] = useState(null);
 
   const handleMouseEnter = (itemName) => {
@@ -15,9 +16,12 @@ function Index() {
     setHoveredItem(null);
   };
 
+  const workRef = useRef(null);
+  useGetYPosition({ set: setWorkPosition, ref: workRef });
+
   return (
     <>
-      <div className="mt-32">
+      <div className="mt-32" ref={workRef}>
         <h2 className="mb-5 font-semibold text-medium lg:hidden">WORK</h2>
 
         {WorkArray.map((item) => (
