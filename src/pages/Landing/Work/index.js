@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { WorkArray } from '../../../data/Work';
 import Tags from '../../../components/Tags';
 import { IoMdArrowForward } from 'react-icons/io';
 import { cn } from '../../../utils/cn';
 
 function Index() {
+  const [hoveredItem, setHoveredItem] = useState(null);
+
+  const handleMouseEnter = (itemName) => {
+    setHoveredItem(itemName);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredItem(null);
+  };
+
   return (
     <>
       <div className="mt-32">
@@ -15,7 +25,12 @@ function Index() {
             href={item.link}
             target="_blank"
             rel="noreferrer"
-            className="group block my-5 w-[110%] relative -left-[5%] lg:hover:bg-[#555b6325] cursor-pointer rounded lg:hover:drop-shadow-2xl  lg:w-[114%] lg:hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:relative lg:-left-[6%] lg:flex lg:p-5">
+            onMouseEnter={() => handleMouseEnter(item.name)}
+            onMouseLeave={handleMouseLeave}
+            style={{
+              opacity: hoveredItem ? (hoveredItem === item.name ? 1 : 0.4) : 1
+            }}
+            className="group block my-5 w-[110%] relative -left-[5%] lg:hover:bg-[#555b6325] cursor-pointer rounded lg:hover:drop-shadow-2xl  lg:w-[114%] lg:hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:relative lg:-left-[6%] lg:flex lg:p-5 transition-opacity duration-300">
             <div className="max-w-[200px] lg:max-w-[125px] hidden lg:block">
               <img src={item.image} alt={item.name} className="" />
             </div>
