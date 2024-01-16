@@ -8,13 +8,15 @@ function Index() {
   return (
     <>
       <div className="mt-32">
+        <h2 className="mb-5 font-semibold text-medium lg:hidden">WORK</h2>
+
         {WorkArray.map((item) => (
           <a
             href={item.link}
             target="_blank"
             rel="noreferrer"
-            className="group my-5 hover:bg-[#555b6325] cursor-pointer rounded hover:drop-shadow-2xl w-full left-0 lg:w-[114%] hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] relative lg:-left-[6%] flex p-5">
-            <div className="max-w-[200px] lg:max-w-[125px]">
+            className="group block my-5 w-[110%] relative -left-[5%] lg:hover:bg-[#555b6325] cursor-pointer rounded lg:hover:drop-shadow-2xl  lg:w-[114%] lg:hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:relative lg:-left-[6%] lg:flex lg:p-5">
+            <div className="max-w-[200px] lg:max-w-[125px] hidden lg:block">
               <img src={item.image} alt={item.name} className="" />
             </div>
             <div className="mx-[5%] ">
@@ -35,10 +37,13 @@ function Index() {
                 ))}
               </div>
             </div>
+            <div className="max-w-[200px] lg:max-w-[125px] mx-[5%] mt-5 lg:hidden">
+              <img src={item.image} alt={item.name} className="" />
+            </div>
           </a>
         ))}
 
-        <p className="relative flex mb-1 text-base font-medium cursor-pointer text-medium group hover:text-green">
+        <p className="relative flex text-base font-medium cursor-pointer text-medium group hover:text-green">
           View Full Project Archive
           <IoMdArrowForward
             className={cn(

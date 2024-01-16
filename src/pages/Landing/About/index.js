@@ -3,7 +3,7 @@ import React from 'react';
 function index() {
   return (
     <div className=" lg:mt-0 tracking-[.5px]">
-      <h2 className="mb-5 font-bold text-medium lg:hidden">ABOUT</h2>
+      <h2 className="mb-5 font-semibold text-medium lg:hidden">ABOUT</h2>
       <p className="mb-4">
         Back in 2021, I searched heavily for a career I would feel passionate
         about. I really enjoy creative thinking and solving complex problems so
