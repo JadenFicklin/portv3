@@ -12,7 +12,8 @@ export const ExperienceArray = [
       'Tailwind',
       'JavaScript',
       'Firebase'
-    ]
+    ],
+    link: 'https://perspectdev.com/'
   },
   {
     timeframe: 'MAY 2022 - DEC 2022',
@@ -27,7 +28,8 @@ export const ExperienceArray = [
       'Tailwind',
       'Firebase',
       'Netlify'
-    ]
+    ],
+    link: 'https://www.linkedin.com/in/jaden-ficklin-b1686a21a/'
   },
   {
     timeframe: 'DEC 2021 - APR 2022',
@@ -42,6 +44,7 @@ export const ExperienceArray = [
       'HTML6',
       'SQL',
       'Heroku'
-    ]
+    ],
+    link: 'https://devmountain.com/'
   }
 ];

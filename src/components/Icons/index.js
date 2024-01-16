@@ -25,12 +25,12 @@ function index() {
   ];
 
   return (
-    <div className="flex items-center self-start">
+    <div className="flex items-center self-start mt-8 lg:mt-0">
       {iconsArray.map((item) => (
         <a
           href={item.link}
           target="_blank"
-          rel="noreferror"
+          rel="noreferrer"
           className="w-6 h-6 mr-5 cursor-pointer">
           {item.icon}
         </a>
