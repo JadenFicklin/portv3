@@ -31,7 +31,7 @@ function Index() {
   return (
     <nav className="hidden mt-20 lg:block">
       {navOptions.map((item) => (
-        <div className="text-xs">
+        <div className="text-xs w-max">
           <Link
             onClick={() => setActiveLink(item.name)}
             className="flex items-center py-3 group">

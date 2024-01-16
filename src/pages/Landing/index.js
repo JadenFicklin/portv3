@@ -12,11 +12,17 @@ function Index() {
 
   useEffect(() => {
     const handleScroll = (event) => {
-      if (rightSectionRef.current) {
+      // Check if the cursor is over the right section
+      if (
+        rightSectionRef.current &&
+        !rightSectionRef.current.contains(event.target)
+      ) {
         rightSectionRef.current.scrollBy(0, event.deltaY);
       }
     };
-    window.addEventListener('wheel', handleScroll);
+
+    window.addEventListener('wheel', handleScroll, { passive: true });
+
     return () => window.removeEventListener('wheel', handleScroll);
   }, []);
 
