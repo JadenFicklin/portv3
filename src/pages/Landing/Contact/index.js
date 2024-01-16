@@ -35,7 +35,7 @@ function Index() {
   };
 
   const inputClassname =
-    'w-full rounded border-[1px] border-light h-[29px] bg-transparent mt-1 focus:text-medium pl-2 text-[16px] focus:bg-[#ffffff1a] hover:bg-[#ffffff1a]';
+    'w-full rounded border-[1px] border-light h-[29px] bg-transparent mt-1 focus:text-medium pl-2 text-[16px] focus:bg-[#555b6325] hover:bg-[#555b6325]';
 
   return (
     <>

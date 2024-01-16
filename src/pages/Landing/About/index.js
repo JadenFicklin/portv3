@@ -1,4 +1,8 @@
 import React from 'react';
+import HoverImage from '../../../components/customComponents/HoverImage';
+
+import devmountain from './images/devmountain.JPG';
+import devmountainCertificate from './images/devmountainCertificate.JPG';
 
 function index() {
   return (
@@ -11,12 +15,34 @@ function index() {
       </p>
       <p className="mb-4">
         As a dedicated{' '}
-        <span className="font-medium cursor-pointer text-medium hover:text-green">
-          Devmountain
-        </span>{' '}
-        <span className="font-medium cursor-pointer text-medium hover:text-green">
-          graduate
-        </span>{' '}
+        <HoverImage
+          image={devmountain}
+          width="270px"
+          height="138px"
+          offsetX={-135}
+          offsetY={-155}>
+          <a
+            href="https://devmountain.com/"
+            target="_blank"
+            rel="noreferrer"
+            className="font-medium cursor-pointer text-medium hover:text-green">
+            Devmountain
+          </a>{' '}
+        </HoverImage>{' '}
+        <HoverImage
+          image={devmountainCertificate}
+          width="270px"
+          height="200px"
+          offsetX={-135}
+          offsetY={-215}>
+          <a
+            href="https://www.linkedin.com/feed/update/urn:li:activity:6918308644237312000/"
+            target="_blank"
+            rel="noreferrer"
+            className="font-medium cursor-pointer text-medium hover:text-green">
+            graduate
+          </a>{' '}
+        </HoverImage>
         with a deep-seated passion for the front-end I thrive in supporting my
         team members in achieving our shared professional goals.
       </p>
