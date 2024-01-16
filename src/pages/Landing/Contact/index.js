@@ -35,13 +35,13 @@ function Index() {
   };
 
   const inputClassname =
-    'w-full rounded border-[1px] border-light h-[29px] bg-transparent mt-1 focus:text-medium pl-2 text-[16px] focus:bg-[#ffffff1a]';
+    'w-full rounded border-[1px] border-light h-[29px] bg-transparent mt-1 focus:text-medium pl-2 text-[16px] focus:bg-[#ffffff1a] hover:bg-[#ffffff1a]';
 
   return (
     <>
       <h2 className="mb-3 font-semibold text-medium mt-28">CONTACT</h2>
       <form ref={form} onSubmit={sendEmail}>
-        <div className="grid grid-cols-2 gap-4 text-xs">
+        <div className="gap-4 text-xs md:grid md:grid-cols-2">
           <div className="group">
             <p className="font-semibold">Name</p>
             <input
@@ -51,7 +51,7 @@ function Index() {
               name="user_name"
             />
           </div>
-          <div>
+          <div className="mt-3 md:mt-0">
             <p className="font-semibold">Email</p>
             <input
               type="email"
@@ -60,7 +60,7 @@ function Index() {
               name="email_address"
             />
           </div>
-          <div className="col-span-2 mb-3">
+          <div className="col-span-2 mt-3 mb-3 md:mt-0">
             <p className="font-semibold">Message</p>
             <textarea
               type="text"

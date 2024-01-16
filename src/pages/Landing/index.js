@@ -4,6 +4,7 @@ import Hero from './Hero';
 import Experience from './Experience';
 import Work from './Work';
 import Contact from './Contact';
+import Outro from './Outro';
 import Nav from '../../components/Nav';
 import Icons from '../../components/Icons';
 import { cn } from '../../utils/cn';
@@ -53,6 +54,7 @@ function Index() {
             <Experience />
             <Work />
             <Contact />
+            <Outro />
           </div>
         </div>
       </div>
