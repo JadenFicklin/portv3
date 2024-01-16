@@ -7,24 +7,16 @@ function Index() {
 
   const navOptions = [
     {
-      name: 'ABOUT',
-      route: '/about',
-      inFrame: false
+      name: 'ABOUT'
     },
     {
-      name: 'EXPERIENCE',
-      route: '/experience',
-      inFrame: false
+      name: 'EXPERIENCE'
     },
     {
-      name: 'WORK',
-      route: '/work',
-      inFrame: false
+      name: 'WORK'
     },
     {
-      name: 'CONTACT',
-      route: '/contact',
-      inFrame: false
+      name: 'CONTACT'
     }
   ];
 
