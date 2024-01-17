@@ -17,7 +17,8 @@ module.exports = {
         bubble: '#2DD4BF1a',
         medium: '#e2e8f0',
         light: '#94a3b8',
-        lightDarker: '#64748B'
+        lightDarker: '#64748B',
+        mobileNavBg: '#0f172abf'
       }
     }
   },

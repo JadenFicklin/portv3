@@ -10,6 +10,7 @@ import About from './About';
 import Experience from './Experience';
 import Work from './Work';
 import Contact from './Contact';
+import { cn } from '../../utils/cn';
 
 function Index() {
   const segments = [
@@ -44,7 +45,7 @@ function Index() {
         <div className="max-w-screen-xl mx-auto lg:grid lg:gap-4 lg:grid-cols-2">
           {/* Left section */}
           <div className="h-screen w-[500px] hidden lg:block" />
-          <div className={navClasses}>
+          <div className={cn(navClasses, 'h-max lg:h-screen')}>
             <div>
               <Hero />
               <Nav tab={tab} depths={depths} segments={segments} />
