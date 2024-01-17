@@ -1,11 +1,10 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { ExperienceArray } from '../../../data/Experience';
 import Tags from '../../../components/Tags';
 import { IoMdArrowForward } from 'react-icons/io';
 import { cn } from '../../../utils/cn';
-import useGetYPosition from '../../../hooks/useGetYPosition';
 
-function Index({ setExperiencePosition }) {
+function Index() {
   const [hoveredItem, setHoveredItem] = useState(null);
 
   const handleMouseEnter = (itemName) => {
@@ -16,11 +15,8 @@ function Index({ setExperiencePosition }) {
     setHoveredItem(null);
   };
 
-  const experienceRef = useRef(null);
-  useGetYPosition({ set: setExperiencePosition, ref: experienceRef });
-
   return (
-    <div className="mt-24 lg:mt-32" ref={experienceRef}>
+    <div className="mt-24 lg:mt-32">
       <h2 className="mb-5 font-semibold text-medium lg:hidden">EXPERIENCE</h2>
       {ExperienceArray.map((item) => (
         <a

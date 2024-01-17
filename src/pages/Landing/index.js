@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Hero from './Hero';
-import Content from './Content';
 import Nav from '../../components/Nav';
+import ScrollTabs from './ScrollTabs';
 import Icons from '../../components/Icons';
 import clsx from 'clsx';
 
@@ -28,7 +28,7 @@ function Index() {
             <Icons />
           </div>
           {/* Right section */}
-          <Content tab={tab} setTab={setTab} />
+          <ScrollTabs />
         </div>
       </div>
     </>
