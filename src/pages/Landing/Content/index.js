@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import Outro from '../Outro';
 
 function Index({ segments, setDepths }) {
   return (
@@ -6,6 +7,7 @@ function Index({ segments, setDepths }) {
       {segments.map((props) => (
         <Segment key={props.name} {...props} setDepths={setDepths} />
       ))}
+      <Outro />
     </div>
   );
 }
