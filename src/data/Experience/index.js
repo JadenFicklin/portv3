@@ -4,7 +4,7 @@ export const ExperienceArray = [
     name: 'Perspective Developer',
     position: 'Website Developer (Fullstack)',
     description:
-      'Work with a team of Developers to deliver high-quality, robust production code for a diverse array of projects for clients including Blck, k-12 Samudra, and Luxvesting',
+      'I work with a team of Developers to deliver high-quality, robust production code for a diverse array of projects and clients including Blck, k-12 Samudra, and Luxvesting',
     technologies: [
       'React',
       'TypeScript',
