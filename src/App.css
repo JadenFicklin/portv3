@@ -78,3 +78,19 @@ body {
 .cursor-ripple {
   animation: ripple 0.2s ease-out;
 }
+
+/* wave */
+
+/* .wave g path:hover {
+  stroke: white;
+  stroke-width: 3;
+}
+
+.wave g path:active {
+  stroke: white;
+  fill: rgba(255, 255, 255, 0.247);
+} */
+
+.wave g path {
+  transition: fill 0.8s ease, stroke-width 0.8s ease, stroke 0s ease;
+}

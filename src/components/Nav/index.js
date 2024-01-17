@@ -20,14 +20,14 @@ function Index({ tab, depths, segments }) {
           <div className="flex items-center py-3 group">
             <div
               className={cn(
-                'h-[1px] duration-300 mr-4 group-hover:w-[60px] group-hover:bg-light',
+                'h-[1px] duration-300 mr-4 group-hover:w-[60px] group-hover:bg-light ',
                 tab === `${name}`
                   ? 'w-[60px] bg-light'
                   : 'w-[30px] bg-lightDarker'
               )}></div>
             <p
               className={cn(
-                'font-semibold tracking-[1px] group-hover:text-medium',
+                'font-semibold tracking-[1px] group-hover:text-medium select-none',
                 tab === `${name}` ? 'text-medium' : 'text-lightDarker'
               )}>
               {name.toUpperCase()}
