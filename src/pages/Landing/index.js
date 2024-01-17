@@ -11,6 +11,7 @@ import Experience from './Experience';
 import Work from './Work';
 import Contact from './Contact';
 import { cn } from '../../utils/cn';
+import CursorLight from '../../components/customComponents/CursorLight';
 
 function Index() {
   const segments = [
@@ -41,8 +42,9 @@ function Index() {
 
   return (
     <>
-      <div className="w-full bg-background">
-        <div className="max-w-screen-xl mx-auto lg:grid lg:gap-4 lg:grid-cols-2">
+      <div className="w-full bg-background -z-10">
+        <CursorLight />
+        <div className="z-10 max-w-screen-xl mx-auto lg:grid lg:gap-4 lg:grid-cols-2">
           {/* Left section */}
           <div className="h-screen w-[500px] hidden lg:block" />
           <div className={cn(navClasses, 'h-max lg:h-screen')}>
