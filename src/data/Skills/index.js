@@ -3,13 +3,11 @@ import {
   SiReact,
   SiTypescript,
   SiExpress,
-  SiTailwind,
   SiPostman,
   SiHeroku,
   SiFirebase,
   SiAxios
 } from 'react-icons/si';
-import { TbRoute, TbApi } from 'react-icons/tb';
 import {
   FaNodeJs,
   FaCss3Alt,
@@ -19,82 +17,80 @@ import {
   FaCcStripe
 } from 'react-icons/fa';
 import { FaGitlab } from 'react-icons/fa6';
+import { SiNetlify } from 'react-icons/si';
+import { SiTailwindcss } from 'react-icons/si';
 
-const skillsArray = [
+const svgClass = 'w-full h-full fill-green ';
+
+export const skillsArray = [
   {
     name: 'JavaScript',
-    icon: <SiJavascript />
+    icon: <SiJavascript className={svgClass} />
   },
   {
     name: 'TypeScript',
-    icon: <SiTypescript />
+    icon: <SiTypescript className={svgClass} />
   },
   {
     name: 'React',
-    icon: <SiReact />
+    icon: <SiReact className={svgClass} />
   },
-  {
-    name: 'Zustand',
-    icon: <TbRoute />
-  },
+
   {
     name: 'NodeJs',
-    icon: <FaNodeJs />
+    icon: <FaNodeJs className={svgClass} />
   },
   {
     name: 'Express',
-    icon: <SiExpress />
+    icon: <SiExpress className={svgClass} />
   },
   {
     name: 'Tailwind',
-    icon: <SiTailwind />
+    icon: <SiTailwindcss className={svgClass} />
   },
   {
     name: 'CSS',
-    icon: <FaCss3Alt />
+    icon: <FaCss3Alt className={svgClass} />
   },
   {
     name: 'Git',
-    icon: <FaGit />
+    icon: <FaGit className={svgClass} />
   },
   {
     name: 'GitHub',
-    icon: <FaGithub />
+    icon: <FaGithub className={svgClass} />
   },
   {
     name: 'Gitlab',
-    icon: <FaGitlab />
+    icon: <FaGitlab className={svgClass} />
   },
   {
     name: 'Postman',
-    icon: <SiPostman />
+    icon: <SiPostman className={svgClass} />
   },
   {
     name: 'Heroku',
-    icon: <SiHeroku />
+    icon: <SiHeroku className={svgClass} />
   },
   {
     name: 'Firebase',
-    icon: <SiFirebase />
+    icon: <SiFirebase className={svgClass} />
   },
   {
     name: 'Netlify',
-    icon: <SiNetlife />
+    icon: <SiNetlify className={svgClass} />
   },
-  {
-    name: 'APIs',
-    icon: <TbApi />
-  },
+
   {
     name: 'HTML5',
-    icon: <FaHtml5 />
+    icon: <FaHtml5 className={svgClass} />
   },
   {
     name: 'Axios',
-    icon: <SiAxios />
+    icon: <SiAxios className={svgClass} />
   },
   {
     name: 'Stripe',
-    icon: <FaCcStripe />
+    icon: <FaCcStripe className={svgClass} />
   }
 ];
