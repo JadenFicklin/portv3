@@ -1,13 +1,37 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Hero from './Hero';
 import Nav from '../../components/Nav';
-import ScrollTabs from './ScrollTabs';
+import Content from './Content';
 import Icons from '../../components/Icons';
 import clsx from 'clsx';
+import useScrollTabs from '../../hooks/useScrollTabs';
+
+import About from './About';
+import Experience from './Experience';
+import Work from './Work';
+import Contact from './Contact';
 
 function Index() {
-  const [tab, setTab] = useState('about');
-  const navOptions = ['about', 'experience', 'work', 'contact'];
+  const segments = [
+    {
+      name: 'about',
+      Component: About
+    },
+    {
+      name: 'experience',
+      Component: Experience
+    },
+    {
+      name: 'work',
+      Component: Work
+    },
+    {
+      name: 'contact',
+      Component: Contact
+    }
+  ];
+
+  const { tab, depths, setDepths } = useScrollTabs(segments);
 
   const navClasses = clsx(
     'flex flex-col justify-between h-screen lg:fixed w-full lg:w-[500px]',
@@ -23,12 +47,12 @@ function Index() {
           <div className={navClasses}>
             <div>
               <Hero />
-              <Nav tab={tab} setTab={setTab} navOptions={navOptions} />
+              <Nav tab={tab} depths={depths} segments={segments} />
             </div>
             <Icons />
           </div>
           {/* Right section */}
-          <ScrollTabs />
+          <Content segments={segments} setDepths={setDepths} />
         </div>
       </div>
     </>
