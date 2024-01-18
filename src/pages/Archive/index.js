@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { GoArrowLeft } from 'react-icons/go';
 import { allProjectsArray } from '../../data/AllProjects';
-
 import Tags from '../../components/Tags';
 import { IoMdArrowForward } from 'react-icons/io';
 import { cn } from '../../utils/cn';
 
 function Index() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="max-w-screen-xl min-h-screen px-6 py-12 mx-auto font-sans md:px-12 md:py-20 lg:px-24 lg:py-0">
       <div className="lg:py-24">
