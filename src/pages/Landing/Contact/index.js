@@ -1,9 +1,18 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { cn } from '../../../utils/cn';
 import emailjs from '@emailjs/browser';
+import { BsFillCheckCircleFill } from 'react-icons/bs';
 
 function Index() {
   const form = useRef();
+  const [success, setSuccess] = useState(false);
+
+  const messageSent = () => {
+    setSuccess(true);
+    setTimeout(() => {
+      setSuccess(false);
+    }, 2000);
+  };
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -23,6 +32,7 @@ function Index() {
       )
       .then(
         (result) => {
+          messageSent();
           console.log(result.text);
           console.log('message sent successfully!');
           e.target.reset();
@@ -39,6 +49,17 @@ function Index() {
 
   return (
     <>
+      <div
+        className={cn(
+          success
+            ? 'bg-background border-green border-[1px]  w-96 h-20 shadow-xl rounded-lg fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-wrap content-center justify-center duration-300 z-50'
+            : 'hidden'
+        )}>
+        <p className="text-[22px] text-green h-min">Successfully sent! </p>
+        <div className="w-8 h-8 ml-6">
+          <BsFillCheckCircleFill className="inline w-full h-full fill-green" />
+        </div>
+      </div>
       <h2 className="mb-3 font-semibold text-medium mt-28">CONTACT</h2>
       <form ref={form} onSubmit={sendEmail}>
         <div className="gap-4 text-xs md:grid md:grid-cols-2">
