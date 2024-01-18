@@ -3,6 +3,7 @@ import { WorkArray } from '../../../data/Work';
 import Tags from '../../../components/Tags';
 import { IoMdArrowForward } from 'react-icons/io';
 import { cn } from '../../../utils/cn';
+import { Link } from 'react-router-dom';
 
 function Index() {
   const [hoveredItem, setHoveredItem] = useState(null);
@@ -59,14 +60,16 @@ function Index() {
           </a>
         ))}
 
-        <p className="relative flex text-base font-medium cursor-pointer text-medium group hover:text-green">
+        <Link
+          to="/archive"
+          className="relative flex text-base font-medium cursor-pointer text-medium group hover:text-green">
           View Full Project Archive
           <IoMdArrowForward
             className={cn(
               'rotate-[-45deg] relative -bottom-[6px] left-1 group-hover:bottom-[-3px] group-hover:left-[8px] duration-300 group-hover:fill-green'
             )}
           />
-        </p>
+        </Link>
       </div>
     </>
   );

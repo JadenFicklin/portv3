@@ -10,7 +10,6 @@ import Experience from './Experience';
 import Work from './Work';
 import Contact from './Contact';
 import { cn } from '../../utils/cn';
-import CursorLight from '../../components/customComponents/CursorLight';
 import Wave from './Wave/Wave';
 
 function Index() {
@@ -43,7 +42,6 @@ function Index() {
   return (
     <>
       <div className="w-full bg-background -z-10 ">
-        <CursorLight />
         <Wave />
         <div className="z-10 max-w-screen-xl mx-auto lg:grid lg:gap-4 lg:grid-cols-2 ">
           {/* Left section */}
