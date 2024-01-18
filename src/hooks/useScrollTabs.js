@@ -36,7 +36,7 @@ const useScrollTabs = (segments) => {
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [depths, isLoaded]);
+  }, [depths, isLoaded, lastSegment.name, segments]);
 
   return { tab, setTab, depths, setDepths, segments };
 };

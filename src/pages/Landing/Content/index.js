@@ -20,7 +20,7 @@ function Segment({ name, setDepths, Component }) {
     const topOfRef = segmentRef.current.getBoundingClientRect().top;
     const position = topOfRef + window.scrollY;
     setDepths((prevDepths) => ({ ...prevDepths, [name]: position }));
-  }, [segmentRef.current]);
+  }, [name, setDepths]);
 
   return (
     <div ref={segmentRef}>

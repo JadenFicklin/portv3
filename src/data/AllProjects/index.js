@@ -3,7 +3,7 @@ export const allProjectsArray = [
     year: 2024,
     project: 'Portfolio V3',
     madeAt: 'Freelance',
-    builtWith: ['React', 'Javascript', 'Tailwind', 'Firebase'],
+    builtWith: ['React', 'Javascript', 'Tailwind', 'Netlify'],
     link: 'https://jadenficklin.com/'
   },
   {
