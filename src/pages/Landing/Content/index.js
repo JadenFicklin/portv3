@@ -3,7 +3,7 @@ import Outro from '../Outro';
 
 function Index({ segments, setDepths }) {
   return (
-    <div className="px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-24">
+    <div className="px-6 py-12 md:px-12 md:py-20 lg:py-24">
       {segments.map((props) => (
         <Segment key={props.name} {...props} setDepths={setDepths} />
       ))}

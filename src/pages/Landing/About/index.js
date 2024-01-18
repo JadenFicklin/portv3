@@ -11,7 +11,7 @@ function Index() {
   const [skills, setSkills] = useState(false);
 
   return (
-    <div className=" lg:mt-0 tracking-[.5px]">
+    <div className="tracking-widest  lg:mt-0">
       <div className="sticky top-0 z-20 w-screen px-6 py-5 mb-4 -mx-6 bg-slate-900/75 backdrop-blur md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0 lg:hidden">
         <h2 className="font-semibold text-medium lg:hidden">ABOUT</h2>
       </div>
